@@ -65,7 +65,7 @@ class PortfolioController extends Controller
         else{
             request()->session()->flash('error','Error, Please try again');
         }
-        return redirect()->route('project.index');
+        return redirect()->route('portfolio.index');
     }
 
     /**

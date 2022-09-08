@@ -276,7 +276,7 @@
               <div class="portfolio-info">
                 <h4>{{$portf->nama_project}}</h4>
                 <p>{{$portf->penyelenggara}}</p>
-                <div class="portfolio-links">
+                <div class="container_img-holder">
                   <a href="{{$portf->photo}}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="fa-solid fa-eye"></i></a>
                   <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
                 </div>
