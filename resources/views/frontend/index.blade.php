@@ -1,6 +1,6 @@
 @extends('frontend.layouts.master')
 
-@section('title','Joy Vinensius Meliala || Portfolio')
+@section('title','iPortfolio')
 
 @section('main-content')
 

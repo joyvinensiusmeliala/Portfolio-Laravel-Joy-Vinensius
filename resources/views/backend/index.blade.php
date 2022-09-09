@@ -1,5 +1,5 @@
 @extends('backend.layouts.master')
-@section('title','Portfolio || DASHBOARD')
+@section('title','iPortfolio | Admin')
 @section('main-content')
 <div class="container-fluid">
     @include('backend.layouts.notification')
