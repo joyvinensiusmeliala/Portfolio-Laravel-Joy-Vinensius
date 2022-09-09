@@ -1,5 +1,5 @@
 ---
 deployment:
 tasks:
-- export DEPLOYPATH=/home/joym3125/public_html/git
+- export DEPLOYPATH=/home/joym3125/public_html/portfolio/git
 - /bin/cp -r * $DEPLOYPATH
