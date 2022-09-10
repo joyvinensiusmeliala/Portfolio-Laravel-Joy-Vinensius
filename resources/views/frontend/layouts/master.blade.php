@@ -21,7 +21,7 @@
 	@include('frontend.layouts.header')
 	<!--/ End Header -->
 	@yield('main-content')
-
+	{{--  @include('frontend.pages.about')  --}}
 	@include('frontend.layouts.footer')
 
 </body>

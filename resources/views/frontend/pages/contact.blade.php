@@ -1,6 +1,4 @@
-@extends('frontend.layouts.master')
 
-@section('main-content')
 
 <div class="section px-2 px-lg-4 pb-4 pt-5 mb-5" id="contact">
     <div class="container-narrow">
@@ -61,4 +59,4 @@
     </div>
   </div>
 
-@endsection
+

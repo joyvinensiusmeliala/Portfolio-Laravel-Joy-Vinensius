@@ -117,7 +117,8 @@
         captionText.forEach((captionTextItem) => {
           captionTextItem.innerHTML = this.alt;
         });
-        navBar.style.display = "none";
+        navBar.style.zIndex = "1";
+        navBar.style.transition = "none";
       };
     });
     const spanProject = document.querySelectorAll(".close-project");
@@ -125,6 +126,7 @@
       spanProjectItem.onclick = function() {
         modal.forEach((modalItem) => {
           modalItem.style.display = "none";
+          navBar.style.transition = "all .5s eas";
         });
       };
     });
@@ -156,7 +158,8 @@
         captionTextPortfolio.forEach((captionTextItem) => {
           captionTextItem.innerHTML = this.alt;
         });
-        navBar.style.display = "none";
+        navBar.style.zIndex = "1";
+        navBar.style.transition = "none";
       };
     });
     const spanPortofolio = document.querySelectorAll(".close");
@@ -164,15 +167,11 @@
       spanProjectItem.onclick = function() {
         modalPortofolio.forEach((modalItem) => {
           modalItem.style.display = "none";
+          navBar.style.transition = "all .5s eas";
         });
       };
     });
-    imgPortofolio.onclick = function() {
-      modalPortofolio.style.display = "block";
-      navBar.style.display = "none";
-      modalImgPortofolio.src = this.src;
-      captionTextPortfolio.innerHTML = this.alt;
-    };
+
     // end of Looping for certificate
     // end of DOM Portfolio
   };
