@@ -12,12 +12,6 @@
     <noscript>
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;700;800&amp;display=swap"/>
     </noscript>
-    <link rel="stylesheet" href="{{asset('frontend/css/bootstrap.css')}}">
-    <link rel="stylesheet" href="{{asset('frontend/css/aos.css?ver=1.2.0')}}">
-    <link rel="stylesheet" href="{{asset('frontend/css/bootstrap.min.css')}}">
-    <link rel="stylesheet" href="{{asset('frontend/css/main.css?ver=1.2.0')}}">
-    <link rel="stylesheet" href="{{asset('frontend/css/bootstrap-icons/bootstrap-icons.css?ver=1.2.0')}}">
-    <link rel="stylesheet" href="{{asset('frontend/css/font-awesome/css/all.min.css?ver=1.2.0')}}">
     
     
     <noscript>
@@ -131,17 +125,20 @@
     <script src="{{asset('frontend/scripts/purecounter.min.js?ver=1.2.0')}}"></script>
     <script src="{{asset('frontend/scripts/bootstrap.bundle.min.js?ver=1.2.0')}}"></script>
     <script src="{{asset('frontend/scripts/aos.min.js?ver=1.2.0')}}"></script>
-    <script src="{{asset('frontend/scripts/main.js?ver=1.2.0')}}"></script>
+
 
     <!-- Bikin JS -->
 
     <script src="{{asset('frontend/scripts/bikin/aos.js')}}"></script>
     <script src="{{asset('frontend/scripts/bikin/bootstrap.bundle.min.js')}}"></script>
     <script src="{{asset('frontend/scripts/bikin/glightbox.min.js')}}"></script>
+    <script src="{{asset('frontend/scripts/bikin/glightbox.js')}}"></script>
+    
     <script src="{{asset('frontend/scripts/bikin/isotope.pkgd.min.js')}}"></script>
     <script src="{{asset('frontend/scripts/bikin/swiper-bundle.min.js')}}"></script>
     <script src="{{asset('frontend/scripts/bikin/validate.js')}}"></script>
     <script src="{{asset('frontend/scripts/bikin/main-bikin.js')}}"></script>
+    <script src="{{asset('frontend/scripts/main.js?ver=1.2.0')}}"></script>
 
     <!-- End JS -->
   </body>

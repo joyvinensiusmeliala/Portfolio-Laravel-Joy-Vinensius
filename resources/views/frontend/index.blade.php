@@ -174,7 +174,56 @@
         </div>
       </div>
 
-    {{--  end start service   --}}
+    {{--  End Of Content Service   --}}
+
+    <!-- ======= Values Section ======= -->
+    <section id="values" class="values">
+
+      <div class="container" data-aos="fade-up">
+
+        <div class="text-center mb-5">
+          <h2 class="marker marker-center">My Services</h2>
+        </div>
+        <div class="text-center">
+          <p class="mx-auto mb-3" style="max-width:600px"> I offer services fit for any website or app. I can quickly maximize timely deliverables for real-time schemas.</p>
+        </div>
+
+        {{--  <header class="section-header">
+          <h2>Our Values</h2>
+          <p>Odit est perspiciatis laborum et dicta</p>
+        </header>  --}}
+
+        <div class="row">
+
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="box">
+              <img src="{{asset('frontend/img/values-1.png')}}" class="img-fluid" alt="">
+              <h3>Ad cupiditate sed est odio</h3>
+              <p>Eum ad dolor et. Autem aut fugiat debitis voluptatem consequuntur sit. Et veritatis id.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="400">
+            <div class="box">
+              <img src="{{asset('frontend/img/values-2.png')}}" class="img-fluid" alt="">
+              <h3>Voluptatem voluptatum alias</h3>
+              <p>Repudiandae amet nihil natus in distinctio suscipit id. Doloremque ducimus ea sit non.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="600">
+            <div class="box">
+              <img src="{{asset('frontend/img/values-3.png')}}" class="img-fluid" alt="">
+              <h3>Fugit cupiditate alias nobis.</h3>
+              <p>Quam rem vitae est autem molestias explicabo debitis sint. Vero aliquid quidem commodi.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- End Values Section -->
 
     <div class="section px-3 px-lg-4 pt-5" id="skills">
         <div class="container-narrow">
@@ -209,188 +258,6 @@
         </div>
       </div>
 
-      
-
-      <div class="section px-2 px-lg-4 pt-5" id="portfolio">
-        <div class="container">
-          <div class="text-center mb-5">
-            <h2 class="marker marker-center">Portfolio </h2>
-          </div>
-          
-          
-
-          <!-- <div class="grid bp-gallery pb-3" data-aos="zoom-in-up" data-aos-delay="100">
-          @php
-                $portfolio=DB::table('portfolios')->get();
-                
-            @endphp
-            @if($portfolio)
-            @foreach($portfolio as $key=>$portf)
-            <div class="grid-sizer"></div>
-            <div class="grid-item"><a href="https://dribbble.com">
-                <figure class="portfolio-item"><img src="{{$portf->photo}}" data-bp="images/portfolio/1.jpg"/>
-                  <figcaption>
-                    <h4 class="h5 mb-0">{{$portf->nama_project}}</h4>
-                    <div>{{$portf->penyelenggara}}</div>
-                  </figcaption>
-                </figure></a></div>
-                @endforeach
-            @endif
-          </div> -->
-          
-        </div>
-      </div>
-
-<!-- ======= Portfolio Section ======= -->
-<section id="portfolio" class="portfolio">
-      <div class="container" data-aos="fade-up">
-
-        <!-- <div class="section-title">
-          <h2>Portfolio</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-        </div> -->
-
-        <div class="row">
-          <div class="col-lg-12 d-flex justify-content-center">
-            <ul id="portfolio-flters">
-              <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-app">Sugar Mill Project</li>
-              <li data-filter=".filter-card">Card</li>
-              <li data-filter=".filter-web">Web</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="row portfolio-container">
-        @php
-                $portfolio=DB::table('portfolios')->where('category','1')->get();
-                
-                
-            @endphp
-            @if($portfolio)
-            @foreach($portfolio as $key=>$portf)
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-          
-            <div class="portfolio-wrap">
-              <img src="{{$portf->photo}}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>{{$portf->nama_project}}</h4>
-                <p>{{$portf->penyelenggara}}</p>
-                <div class="container_img-holder">
-                  <a href="{{$portf->photo}}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="fa-solid fa-eye"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-            
-          </div>
-          @endforeach
-            @endif
-
-            @php
-                $portfolio1=DB::table('portfolios')->where('category','2')->get();
-                
-                
-            @endphp
-            @if($portfolio1)
-            @foreach($portfolio1 as $key=>$portf1)
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="{{$portf1->photo}}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>{{$portf1->nama_project}}</h4>
-                <p>{{$portf->penyelenggara}}</p>
-                <div class="portfolio-links">
-                  <a href="{{$portf1->photo}}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          @endforeach
-            @endif
-          
-            @php
-                $portfolio2=DB::table('portfolios')->where('category','3')->get();
-            @endphp
-            @if($portfolio2)
-            @foreach($portfolio2 as $key=>$portf2)
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="{{$portf2->photo}}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>{{$portf2->nama_project}}</h4>
-                <p>{{$portf2->penyelenggara}}</p>
-                <div class="portfolio-links">
-                  <a href="{{$portf2->photo}}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          @endforeach
-            @endif
-          
-          
-        </div>
-
-      </div>
-    </section><!-- End Portfolio Section -->
-      
-      <div class="section px-3 px-lg-4 pt-5" id="project">
-        <div class="container-narrow">
-          <div class="text-center mb-5">
-            <h2 class="marker marker-center">Project Undertakens</h2>
-          </div>
-          <div class="row">
-            @php
-                $project=DB::table('projects')->get();
-                // dd($categories);
-            @endphp
-            @if($project)
-            @foreach($project as $key=>$projects)
-            <div class="col-md-6">
-              <div class="card mb-3" data-aos="fade-right" data-aos-delay="100">
-                <div class="card-header px-4 py-2">
-                  <div class="d-flex justify-content-between">
-                    <div>
-                      <h3 class="h5 mb-1">{{$projects->nama_project}}</h3>
-                      <div class="text-muted text-small"><b>{{$projects->penyelenggara}}</b> - {{$projects->lokasi}}</div>
-                      <div class="text-muted text-small"> <small><b>{{ date('d F Y', strtotime($projects->start_project))}} - {{ date('d F Y', strtotime($projects->end_project))}}</b></small></div>
-                      <div class="text-muted text-small"> <small><b>As : {{$projects->sebagai}}</b></small></div>
-                      {{--  $today = Carbon::now()->isoFormat('D MMMM Y');  --}}
-                    </div>
-                    {{--  <img src="images/services/ui-ux.svg" width="48" height="48" alt="ui-ux"/>  --}}
-                    {{--  <img src="{{$projects->photo}}" alt="logo" width="50px" height="50px" />  --}}
-                  </div>
-                </div>
-
-                <div class="card-body px-4 py-3">
-                  <p>
-                     <b>Deskripsi Project : </b>
-                    <small>
-                      {{--  {{$projects->deskripsi}}  --}}
-
-                    {!! preg_replace("/^(.*)<br.*\/?>/m", '<p>$1</p>' , ($projects->deskripsi)) !!}
-                    {{--  preg_replace("/^(.*)<br.*\/?>/m", '<p>$1</p>', $string);  --}}
-
-                  </small>
-                  </p>
-                  {{--  <p>Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.</p>  --}}
-                </div>
-              </div>
-            </div>
-            @endforeach
-            @endif
-
-
-
-          </div>
-        </div>
-      </div>
-
-     
-    
       <div class="section px-3 px-lg-4 pt-5" id="experience">
         <div class="container-narrow">
           <div class="text-center mb-5">
@@ -445,16 +312,15 @@
           </div>
         </div>
       </div>
+      
 
        <!-- ======= Clients Section ======= -->
-    <section id="clients" class="clients">
-      <div class="container" data-aos="zoom-in">
-
+     <section id="clients" class="clients">
+      
+     <div class="container" data-aos="zoom-in">
         <div class="row">
         @php
                 $pekerjaan=DB::table('pekerjaans')->orderBy('start_bekerja','DESC')->get();
-
-                
                 // dd($categories);
             @endphp
             @if($pekerjaan)
@@ -464,12 +330,276 @@
           </div>
 
           @endforeach
-            @endif
-
+          @endif
         </div>
+      </div> 
+      
+    </section>
+    
+    <!-- End Clients Section -->
+      
+    
+      <div class="section px-2 px-lg-4 pt-5" id="portfolio">
+        <div class="container">
+          <div class="text-center mb-5">
+            <h2 class="marker marker-center">Portfolio </h2>
+          </div>
+          
+          
+
+          <!-- <div class="grid bp-gallery pb-3" data-aos="zoom-in-up" data-aos-delay="100">
+          @php
+                $portfolio=DB::table('portfolios')->get();
+                
+            @endphp
+            @if($portfolio)
+            @foreach($portfolio as $key=>$portf)
+            <div class="grid-sizer"></div>
+            <div class="grid-item"><a href="https://dribbble.com">
+                <figure class="portfolio-item"><img src="{{$portf->photo}}" data-bp="images/portfolio/1.jpg"/>
+                  <figcaption>
+                    <h4 class="h5 mb-0">{{$portf->nama_project}}</h4>
+                    <div>{{$portf->penyelenggara}}</div>
+                  </figcaption>
+                </figure></a></div>
+                @endforeach
+            @endif
+          </div> -->
+          
+        </div>
+      </div>
+
+<!-- ======= Portfolio Section ======= -->
+<section id="portfolio" class="portfolio section px-3 px-lg-4 pt-5  ">
+      <div class="container-narrow">
+
+         {{--  <div class="section-title">
+          <h2>Portfolio</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        </div>  --}}
+
+        <div class="row">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="portfolio-flters">
+              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter=".filter-app">Sugar Mill Project</li>
+              <li data-filter=".filter-card">Card</li>
+              <li data-filter=".filter-web">Web</li>
+            </ul>
+          </div>
+        </div>
+        <div class="row portfolio-container">
+          @php
+                  $portfolio=DB::table('portfolios')->where('category','1')->get();
+                  
+                  
+              @endphp
+              @if($portfolio)
+              @foreach($portfolio as $key=>$portf)
+             
+             <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            
+              <img id="myImgPortofolio" src="{{$portf->photo }}" alt="Snow" style="width:100%;max-width:300px">
+
+              <!-- The Modal -->
+              <div id="myModalPortofolio" class="modal-portofolio">
+      
+                <!-- The Close Button -->
+                <span class="close">&times;</span>
+      
+                <!-- Modal Content (The Image) -->
+                <img class="modal-content" id="img02">
+      
+                <!-- Modal Caption (Image Text) -->
+                <div id="captionPortofolio"></div>
+              </div> 
+              
+            </div>  
+            {{--  Content  --}}
+          
+            @endforeach
+              @endif
+  
+              @php
+                  $portfolio1=DB::table('portfolios')->where('category','2')->get();
+                  
+                  
+              @endphp
+              @if($portfolio1)
+              @foreach($portfolio1 as $key=>$portf1)
+            <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            
+              <img id="myImgPortofolio" src="{{$portf1->photo }}" alt="Snow" style="width:100%;max-width:300px">
+
+              <!-- The Modal -->
+              <div id="myModalPortofolio" class="modal-portofolio">
+      
+                <!-- The Close Button -->
+                <span class="close">&times;</span>
+      
+                <!-- Modal Content (The Image) -->
+                <img class="modal-content" id="img02">
+      
+                <!-- Modal Caption (Image Text) -->
+                <div id="captionPortofolio"></div>
+              </div> 
+              
+            </div>
+            @endforeach
+              @endif
+            
+              @php
+                  $portfolio2=DB::table('portfolios')->where('category','3')->get();
+              @endphp
+              @if($portfolio2)
+              @foreach($portfolio2 as $key=>$portf2)
+              <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            
+                <img id="myImgPortofolio" src="{{$portf2->photo }}" alt="Snow" style="width:100%;max-width:300px">
+  
+                <!-- The Modal -->
+                <div id="myModalPortofolio" class="modal-portofolio">
+        
+                  <!-- The Close Button -->
+                  <span class="close">&times;</span>
+        
+                  <!-- Modal Content (The Image) -->
+                  <img class="modal-content" id="img02">
+        
+                  <!-- Modal Caption (Image Text) -->
+                  <div id="captionPortofolio"></div>
+                </div> 
+                
+              </div>
+            @endforeach
+              @endif
+            
+              
+            
+          </div>
+
+          {{--  <!-- Trigger the Modal -->
+        <img id="myImgPortofolio" src="{{$portf->photo }}" alt="Snow" style="width:100%;max-width:300px">
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal-portofolio">
+
+          <!-- The Close Button -->
+          <span class="close-project">&times;</span>
+
+          <!-- Modal Content (The Image) -->
+          <img class="modal-content" id="img01">
+
+          <!-- Modal Caption (Image Text) -->
+          <div id="caption"></div>
+        </div>  --}}
 
       </div>
-    </section><!-- End Clients Section -->
+    </section>
+    <!-- End Portfolio Section -->
+    
+    
+
+      <div class="section px-3 px-lg-4 pt-5" id="project">
+        <div class="container-narrow">
+          <div class="text-center mb-5">
+            <h2 class="marker marker-center">Project Undertakens</h2>
+          </div>
+          <div class="row">
+            @php
+                $project=DB::table('projects')->get();
+                // dd($categories);
+            @endphp
+            @if($project)
+            @foreach($project as $key=>$projects)
+            <div class="col-md-6">
+              <div class="card mb-3" data-aos="fade-right" data-aos-delay="100">
+                <div class="card-header px-4 py-2">
+                  <div class="d-flex justify-content-between">
+                    <div>
+                      <h3 class="h5 mb-1">{{$projects->nama_project}}</h3>
+                      <div class="text-muted text-small"><b>{{$projects->penyelenggara}}</b> - {{$projects->lokasi}}</div>
+                      <div class="text-muted text-small"> <small><b>{{ date('d F Y', strtotime($projects->start_project))}} - {{ date('d F Y', strtotime($projects->end_project))}}</b></small></div>
+                      <div class="text-muted text-small"> <small><b>As : {{$projects->sebagai}}</b></small></div>
+                      {{--  $today = Carbon::now()->isoFormat('D MMMM Y');  --}}
+                    </div>
+                    {{--  <img src="images/services/ui-ux.svg" width="48" height="48" alt="ui-ux"/>  --}}
+                    {{--  <img src="{{$projects->photo}}" alt="logo" width="50px" height="50px" />  --}}
+                  </div>
+                </div>
+
+                <div class="card-body px-4 py-3">
+                  <p>
+                     <b>Deskripsi Project : </b>
+                    <small>
+                      {{--  {{$projects->deskripsi}}  --}}
+
+                    {!! preg_replace("/^(.*)<br.*\/?>/m", '<p>$1</p>' , ($projects->deskripsi)) !!}
+                    {{--  preg_replace("/^(.*)<br.*\/?>/m", '<p>$1</p>', $string);  --}}
+
+                  </small>
+                  </p>
+                  {{--  <p>Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.</p>  --}}
+                </div>
+              </div>
+            </div>
+            @endforeach
+            @endif
+
+
+
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="section px-3 px-lg-4 pt-5" id="skills">
+        <div class="container-narrow">
+          <div class="text-center mb-5">
+            <h2 class="marker marker-center">Certificate</h2>
+          </div>
+          <div class="text-center">
+            <p class="mx-auto mb-3" style="max-width:600px">I am a quick learner and specialize in multitude of skills required for Web Application Development and Product Design</p>
+          </div>
+          
+          
+
+          <!-- Trigger the Modal -->
+          
+          <div class="row">
+            @php
+            $portfolio=DB::table('portfolios')->get();
+            
+        @endphp
+        @if($portfolio)
+        @foreach($portfolio as $key=>$portofolio)
+            <div class="col-4">
+              <img id="myImg" src="{{$portofolio->photo }}" alt="Snow" style="width:100%;max-width:300px">
+
+              <!-- The Modal -->
+              <div id="myModal" class="modal">
+    
+                <!-- The Close Button -->
+                <span class="close-project">&times;</span>
+    
+                <!-- Modal Content (The Image) -->
+                <img class="modal-content" id="img01">
+    
+                <!-- Modal Caption (Image Text) -->
+                <div id="caption"></div>
+              </div>
+            </div>
+            @endforeach
+            @endif
+          </div>
+          
+          
+   
+          {{--  End Content   --}}
+        </div>
+      </div>
+    
+      
 
       <div class="section px-2 px-lg-4 pb-4 pt-5 mb-5" id="contact">
         <div class="container-narrow">

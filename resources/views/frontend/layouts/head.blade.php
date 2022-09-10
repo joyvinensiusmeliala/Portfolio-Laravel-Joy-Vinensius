@@ -14,6 +14,8 @@
     </noscript>
 <!-- StyleSheet -->
 <link rel="stylesheet" href="{{asset('frontend/css/bootstrap.css')}}">
+<link rel="stylesheet" href="{{asset('frontend/css/glightbox.css')}}">
+<link rel="stylesheet" href="{{asset('frontend/css/glightbox.min.css')}}">
 <link rel="stylesheet" href="{{asset('frontend/css/aos.css?ver=1.2.0')}}">
 <link rel="stylesheet" href="{{asset('frontend/css/bootstrap.min.css')}}">
 <link rel="stylesheet" href="{{asset('frontend/css/main.css?ver=1.2.0')}}">
