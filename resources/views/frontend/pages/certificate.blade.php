@@ -1,4 +1,4 @@
-<div class="section px-3 px-lg-4 pt-5" id="skills">
+<div class="section px-3 px-lg-4 pt-5" id="certificate">
     <div class="container-narrow">
       <div class="text-center mb-5">
         <h2 class="marker marker-center">Certificate</h2>

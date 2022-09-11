@@ -1,19 +1,22 @@
 <!-- ======= Pricing Section ======= -->
+
+<div class="section px-3 px-lg-4 pt-5" id="skills">
+  <div class="container-narrow">
+      <div class="text-center mb-5">
+          <h2 class="marker marker-center">Skills Programming</h2>
+        </div>
+        <div class="text-center">
+          {{--  <p>Odit est perspiciatis laborum et dicta</p>  --}}
+          {{--  <p class="mx-auto mb-3" style="max-width:600px"> Odit est perspiciatis laborum et dicta.</p>  --}}
+          <p class="mx-auto mb-3" style="max-width:600px"> I offer services fit for any website or app. I can quickly maximize timely deliverables for real-time schemas.</p>
+        </div>
+
+  </div>
+</div>
+
     <section id="pricing" class="pricing">
-
       <div class="container" data-aos="fade-up">
-
-        <div class="text-center mb-5">
-            <h2 class="marker marker-center">Skill Programming</h2>
-          </div>
-          <div class="text-center">
-            {{--  <p>Odit est perspiciatis laborum et dicta</p>  --}}
-            {{--  <p class="mx-auto mb-3" style="max-width:600px"> Odit est perspiciatis laborum et dicta.</p>  --}}
-          </div>
-
         <div class="row gy-4" data-aos="fade-left">
-
-          
             @php
         $skill_programming=DB::table('skill_programmings')->get();
         
