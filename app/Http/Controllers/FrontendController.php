@@ -45,8 +45,8 @@ class FrontendController extends Controller
         $products = Product::where('status', 'active')->orderBy('id', 'DESC')->limit(8)->get();
         $category = Category::where('status', 'active')->where('is_parent', 1)->orderBy('title', 'ASC')->get();
         // return $category;
-        // return view('frontend.landingpage')
-        return view('frontend.index')
+        return view('frontend.landingpage')
+            // return view('frontend.index')
             // return view('frontend.layouts.master')
             ->with('featured', $featured)
             ->with('posts', $posts)

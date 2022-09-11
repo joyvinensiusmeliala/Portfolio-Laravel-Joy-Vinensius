@@ -1,54 +1,63 @@
+<!-- ======= Team Section ======= -->
 <div class="section px-3 px-lg-4 pt-5" id="experience">
   <div class="container-narrow">
     <div class="text-center mb-5">
       <h2 class="marker marker-center">Experience</h2>
     </div>
+
+  </div>
+</div>
+<section id="team" class="team ">
+  <div class="container">
+
     <div class="row">
       @php
-          $pekerjaan=DB::table('pekerjaans')->orderBy('start_bekerja','DESC')->get();
+                $pekerjaan=DB::table('pekerjaans')->orderBy('start_bekerja','DESC')->get();
 
-          
-          // dd($categories);
-      @endphp
-      @if($pekerjaan)
-      @foreach($pekerjaan as $key=>$kerja)
-      <div class="col-md-12">
-        <div class="card mb-3" data-aos="fade-right" data-aos-delay="100">
-          <div class="card-header px-4 py-2">
-            <div class="d-flex justify-content-between">
-              <div>
-                <h3 class="h5 mb-1">{{$kerja->nama_pekerjaan}}</h3>
-                <div class="text-muted text-small"><b>{{$kerja->nama_perusahaan}}</b> - {{$kerja->lokasi}}</div>
-                <div class="text-muted text-small">
-                  <small>
-                    {{ date('d F Y', strtotime($kerja->start_bekerja))}} - 
-                    <!-- {{ date('d F Y', strtotime($kerja->end_bekerja))}} -->
-                    @if($kerja->status=='active')
-                      Sedang Bekerja
-                  @else
-                    {{ date('d F Y', strtotime($kerja->end_bekerja))}}
-                  @endif
-                  </small></div>
-              </div>
-              {{--  <img src="images/services/ui-ux.svg" width="48" height="48" alt="ui-ux"/>  --}}
-              <img src="{{$kerja->photo}}" alt="logo" width="50px" height="50px" />
-            </div>
-          </div>
-          <div class="card-body px-4 py-3">
-            <p>
-              <b>Deskripsi Pekerjaan : </b>
+                
+                // dd($categories);
+            @endphp
+            @if($pekerjaan)
+            @foreach($pekerjaan as $key=>$kerja)
+
+      <div class="col-lg-6 mt-4 mt-lg-0">
+        <div class="member d-flex align-items-start">
+          <div class="pic"><img src="{{$kerja->photo}}" class="img-fluid" alt=""></div>
+          <div class="member-info">
+            <h4>{{$kerja->nama_pekerjaan}}</h4>
+            <span>{{$kerja->nama_perusahaan}} - {{$kerja->lokasi}}
+            <div class="text-muted text-small">
               <small>
-              {!! preg_replace("/^(.*)<br.*\/?>/m", '<p>$1</p>' , ($kerja->job_desc)) !!}
+                {{ date('d F Y', strtotime($kerja->start_bekerja))}} - 
+                <!-- {{ date('d F Y', strtotime($kerja->end_bekerja))}} -->
+                @if($kerja->status=='active')
+                  Sedang Bekerja
+              @else
+                {{ date('d F Y', strtotime($kerja->end_bekerja))}}
+              @endif
               </small>
+            </div>
+            </span>
+            
+            <p><b>Job Description : </b></p>
+            <p>
+              {!! preg_replace("/^(.*)<br.*\/?>/m", '<p>$1</p>' , ($kerja->job_desc)) !!}
+              
             </p>
+            <div class="social">
+              <a href=""><i class="fab fa-twitter"></i></a>
+              <a href=""><i class="fab fa-facebook-f"></i></a>
+              <a href=""><i class="fab fa-instagram"></i></a>
+              <a href=""> <i class="fab fa-linkedin"></i> </a>
+            </div>
           </div>
         </div>
       </div>
       @endforeach
-      @endif
-
-      
+            @endif
 
     </div>
+
   </div>
-</div>
+</section><!-- End Team Section -->
+<br>
