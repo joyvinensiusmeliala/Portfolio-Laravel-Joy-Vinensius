@@ -18,8 +18,7 @@
       <div class="container" data-aos="fade-up">
         <div class="row gy-4" data-aos="fade-left">
             @php
-        $skill_programming=DB::table('skill_programmings')->get();
-        
+        $skill_programming=DB::table('skill_programmings')->where('category','1')->get();
     @endphp
     @if($skill_programming)
     @foreach($skill_programming as $key=>$skill_progrm)
@@ -47,3 +46,5 @@
       </div>
 
     </section><!-- End Pricing Section -->
+
+    

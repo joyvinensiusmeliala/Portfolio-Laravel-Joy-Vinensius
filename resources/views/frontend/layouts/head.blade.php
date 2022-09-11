@@ -29,6 +29,7 @@
 <link rel="stylesheet" href="{{asset('frontend/css/portfolio/value.css')}}">
 <link rel="stylesheet" href="{{asset('frontend/css/portfolio/count.css')}}">
 <link rel="stylesheet" href="{{asset('frontend/css/portfolio/client.css')}}">
+<link rel="stylesheet" href="{{asset('frontend/css/portfolio/contenttab1.css')}}">
 <link rel="stylesheet" href="{{asset('frontend/css/portfolio/skill-programming.css')}}">
 <link rel="stylesheet" href="{{asset('frontend/css/portfolio/portfolio.css')}}">
 <link rel="stylesheet" href="{{asset('frontend/css/portfolio/our-team.css')}}">

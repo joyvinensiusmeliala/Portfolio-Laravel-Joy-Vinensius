@@ -16,6 +16,18 @@
           </div>
 
           <div class="form-group">
+            <label for="category" class="col-form-label">Category <span class="text-danger">*</span></label>
+            <select name="category" class="form-control">
+                <option value="1">Programming</option>
+                <option value="2">Network Skill</option>
+                <option value="3">Hard Skill</option>
+            </select>
+            @error('category')
+            <span class="text-danger">{{$message}}</span>
+            @enderror
+            </div>
+
+          <div class="form-group">
               <label for="inputTitle" class="col-form-label">Level <span class="text-danger">*</span></label>
             <input id="inputTitle" type="text" name="level" placeholder="Enter Level"  class="form-control">
             @error('level')

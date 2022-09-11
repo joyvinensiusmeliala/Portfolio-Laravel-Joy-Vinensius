@@ -20,6 +20,7 @@
             <tr>
               <th>No.</th>
               <th>Nama Skill</th>
+              <th>Category</th>
               <th>Level</th>
               <th>Gambar</th>
               <th>Action</th>
@@ -31,6 +32,15 @@
                 <tr>
                     <td>{{$skill->id}}</td>
                     <td>{{$skill->nama_skill}}</td>
+                    <td>
+                      @if($skill->category=='1')
+                          Programming Skill
+                      @elseif($skill->category=='2')
+                          Networking Skill
+                      @elseif($skill->category=='3')
+                          Hard Skill
+                      @endif
+                  </td>
                     <td>{{$skill->level}}</td>
                     <td><img class="avatar img-fluid mt-1" src="{{$skill->photo}}" width="100" height="100" /></td>
                     <td>

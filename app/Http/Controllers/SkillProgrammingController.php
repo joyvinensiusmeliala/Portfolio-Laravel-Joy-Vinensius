@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 // use App\Models\Project;
 use App\Models\SkillProgramming;
 use Illuminate\Support\Str;
+
 class SkillProgrammingController extends Controller
 {
     /**
@@ -15,8 +16,8 @@ class SkillProgrammingController extends Controller
      */
     public function index()
     {
-        $skillprogramming=SkillProgramming::orderBy('id','DESC')->paginate();
-        return view('backend.skillprogramming.index')->with('skill_programmings',$skillprogramming);
+        $skillprogramming = SkillProgramming::orderBy('id', 'DESC')->paginate();
+        return view('backend.skillprogramming.index')->with('skill_programmings', $skillprogramming);
     }
 
     /**
@@ -37,14 +38,15 @@ class SkillProgrammingController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request,[
-            'nama_skill'=>'string|required',
-            'level'=>'string|required',
-            'photo'=>'string'
-            
+        $this->validate($request, [
+            'nama_skill' => 'string|required',
+            'category' => 'string|required',
+            'level' => 'string|required',
+            'photo' => 'string'
+
             // 'photo'=>'string|nullable'
         ]);
-        $data=$request->all();
+        $data = $request->all();
         // $slug=Str::slug($request->title);
         // $count=Project::where('slug',$slug)->count();
         // if($count>0){
@@ -52,12 +54,11 @@ class SkillProgrammingController extends Controller
         // }
         // $data['slug']=$slug;
         // return $data;
-        $status=SkillProgramming::create($data);
-        if($status){
-            request()->session()->flash('success','Project successfully created');
-        }
-        else{
-            request()->session()->flash('error','Error, Please try again');
+        $status = SkillProgramming::create($data);
+        if ($status) {
+            request()->session()->flash('success', 'Project successfully created');
+        } else {
+            request()->session()->flash('error', 'Error, Please try again');
         }
         return redirect()->route('skillprogramming.index');
     }
@@ -81,11 +82,11 @@ class SkillProgrammingController extends Controller
      */
     public function edit($id)
     {
-        $skillprogramming=SkillProgramming::find($id);
-        if(!$skillprogramming){
-            request()->session()->flash('error','Skill Programming not found');
+        $skillprogramming = SkillProgramming::find($id);
+        if (!$skillprogramming) {
+            request()->session()->flash('error', 'Skill Programming not found');
         }
-        return view('backend.skillprogramming.edit')->with('skillprogramming',$skillprogramming);
+        return view('backend.skillprogramming.edit')->with('skillprogramming', $skillprogramming);
     }
 
 
@@ -98,22 +99,21 @@ class SkillProgrammingController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $skillprogramming=SkillProgramming::find($id);
-        $this->validate($request,[
-            'nama_skill'=>'string|required',
-            'level'=>'string|required',
-            'photo'=>'string'
-            
+        $skillprogramming = SkillProgramming::find($id);
+        $this->validate($request, [
+            'nama_skill' => 'string|required',
+            'level' => 'string|required',
+            'photo' => 'string'
+
             // 'photo'=>'string|nullable'
         ]);
-        $data=$request->all();
+        $data = $request->all();
 
-        $status=$skillprogramming->fill($data)->save();
-        if($status){
-            request()->session()->flash('success','Skill Programming successfully updated');
-        }
-        else{
-            request()->session()->flash('error','Error, Please try again');
+        $status = $skillprogramming->fill($data)->save();
+        if ($status) {
+            request()->session()->flash('success', 'Skill Programming successfully updated');
+        } else {
+            request()->session()->flash('error', 'Error, Please try again');
         }
         return redirect()->route('skillprogramming.index');
     }
@@ -126,19 +126,17 @@ class SkillProgrammingController extends Controller
      */
     public function destroy($id)
     {
-        $skillprogramming=SkillProgramming::find($id);
-        if($skillprogramming){
-            $status=$skillprogramming->delete();
-            if($status){
-                request()->session()->flash('success','Skill Programming successfully deleted');
-            }
-            else{
-                request()->session()->flash('error','Error, Please try again');
+        $skillprogramming = SkillProgramming::find($id);
+        if ($skillprogramming) {
+            $status = $skillprogramming->delete();
+            if ($status) {
+                request()->session()->flash('success', 'Skill Programming successfully deleted');
+            } else {
+                request()->session()->flash('error', 'Error, Please try again');
             }
             return redirect()->route('skillprogramming.index');
-        }
-        else{
-            request()->session()->flash('error','Skill Programming not found');
+        } else {
+            request()->session()->flash('error', 'Skill Programming not found');
             return redirect()->back();
         }
     }

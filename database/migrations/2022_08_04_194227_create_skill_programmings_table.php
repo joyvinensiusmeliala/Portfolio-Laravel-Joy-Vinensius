@@ -16,6 +16,7 @@ class CreateSkillProgrammingsTable extends Migration
         Schema::create('skill_programmings', function (Blueprint $table) {
             $table->id();
             $table->string('nama_skill');
+            $table->string('programming');
             $table->int('level');
             $table->string('photo');
             $table->timestamps();

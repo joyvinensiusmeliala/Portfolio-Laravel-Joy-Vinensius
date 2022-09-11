@@ -11,9 +11,10 @@
 {{--  @include('frontend.pages.services')  --}}
 @include('frontend.pages.values')
 @include('frontend.pages.counts')
-@include('frontend.pages.feature')
+@include('frontend.pages.softskill')
 {{--  @include('frontend.pages.skills')  --}}
 @include('frontend.pages.skill-programming')
+@include('frontend.pages.other-skill')
 @include('frontend.pages.experiences')
 @include('frontend.pages.clients')
 @include('frontend.pages.portfolio')

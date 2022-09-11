@@ -1,0 +1,98 @@
+/*--------------------------------------------------------------
+# contenttab1
+--------------------------------------------------------------*/
+.contenttab1 .box {
+  padding: 60px 30px;
+  background: #fff;
+  text-align: center;
+  box-shadow: 10px 0 40px rgba(1, 41, 112, 0.08);
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.contenttab1 .box:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 0 30px rgba(1, 41, 112, 0.1);
+}
+
+.contenttab1 h3 {
+  font-weight: 100;
+  font-size: 8px;
+  margin-bottom: 15px;
+}
+
+.contenttab1 .price {
+  font-size: 16px;
+  color: #444444;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+}
+
+.contenttab1 .price sup {
+  font-size: 20px;
+  top: -15px;
+  left: -3px;
+}
+
+.contenttab1 .price span {
+  color: #bababa;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.contenttab1 img {
+  padding: 30px 40px;
+}
+
+.contenttab1 ul {
+  padding: 0;
+  list-style: none;
+  color: #444444;
+  text-align: center;
+  line-height: 26px;
+  font-size: 16px;
+  margin-bottom: 25px;
+}
+
+.contenttab1 ul li {
+  padding-bottom: 10px;
+}
+
+.contenttab1 ul .na {
+  color: #ccc;
+  text-decoration: line-through;
+}
+
+.contenttab1 .btn-buy {
+  display: inline-block;
+  padding: 8px 40px 10px 40px;
+  border-radius: 50px;
+  color: #4154f1;
+  transition: none;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+  transition: 0.3s;
+  border: 1px solid #4154f1;
+}
+
+.contenttab1 .btn-buy:hover {
+  background: #4154f1;
+  color: #fff;
+}
+
+.contenttab1 .featured {
+  width: 200px;
+  position: absolute;
+  top: 18px;
+  right: -68px;
+  transform: rotate(45deg);
+  z-index: 1;
+  font-size: 14px;
+  padding: 1px 0 3px 0;
+  background: #4154f1;
+  color: #fff;
+}
