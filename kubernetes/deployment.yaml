@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: portfolio-joy-deployment
+  namespace: portfolio
+  labels:
+    app: portfolio
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: portfolio
+  template:
+    metadata:
+      labels:
+        app: portfolio
+    spec:
+      containers:
+      - name: portfolio-container
+        image: joyvinensius/portfolio:1.0  # Menggunakan tag build dari Jenkins
+        ports:
+        - containerPort: 80
+        env:
+        - name: APP_ENV
+          value: "production"
+        - name: APP_DEBUG
+          value: "false"
+        - name: DB_CONNECTION
+          value: "mysql"
+        - name: DB_HOST
+          value: "127.0.0.1"
+        - name: DB_PORT
+          value: "3306"
+        - name: DB_DATABASE
+          value: "joyportfolio_kedua"
+        - name: DB_USERNAME
+          value: "root"
+        - name: DB_PASSWORD
+          value: ""  # Biarkan kosong jika tidak ada password
+      restartPolicy: Always
